@@ -61,19 +61,37 @@ public enum MnemonicLanguageType: CaseIterable {
 
 
 /// An enum contains erros cases for Mnemoic word generation
-public enum MnemonicErrorTypes: Error, Equatable {
-    case errorEntropyBytesCreation
-    case errorMnemonicDataCreationFromHexString
-    case errorStringToBitIndex
+public enum MnemonicErrorTypes: Error, Equatable, CustomStringConvertible {
+    case entropyBytesCreation
+    case mnemonicDataCreationFromHexString
+    case stringToBitIndex
+    case emptyWordCount
+    case wrongWordCount
+    case unsupportLanguage
+    case invalidWord
+    case invalidChecksumLength
+    case checksumMismatch
     
-    public var name: String {
+    public var description: String {
         switch self {
-        case .errorEntropyBytesCreation:
+        case .entropyBytesCreation:
             "errorEntropyBytesCreation"
-        case .errorMnemonicDataCreationFromHexString:
+        case .mnemonicDataCreationFromHexString:
             "errorMnemonicDataCreationFromHexString"
-        case .errorStringToBitIndex:
+        case .stringToBitIndex:
             "errorStringToBitIndex"
+        case .emptyWordCount:
+            "errorEmptyWordCount"
+        case .wrongWordCount:
+            "errorWrongWordCount"
+        case .unsupportLanguage:
+            "errorUnsupportLanguage"
+        case .invalidWord:
+            "errorInvalidWord"
+        case .invalidChecksumLength:
+            "invalidChecksumLength"
+        case .checksumMismatch:
+            "checksumMismatch"
         }
     }
 }

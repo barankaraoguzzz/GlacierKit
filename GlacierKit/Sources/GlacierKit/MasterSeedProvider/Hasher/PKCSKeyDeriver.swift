@@ -21,7 +21,6 @@ public final class PKCS5: PKCSKeyDeriverProtocol {
     public init() {}
     
     public enum Error: Swift.Error {
-        case invalidInput
         case memoryFailure
         case parameterError
         case unknown(status: Int32)

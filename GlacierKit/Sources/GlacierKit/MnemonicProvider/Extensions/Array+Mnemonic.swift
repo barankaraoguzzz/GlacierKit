@@ -8,10 +8,6 @@ import Foundation
 
 
 extension Array where Element == UInt8 {
-    var hexString: String {
-        self.map { String(format: "%02x", $0) }.joined()
-    }
-    
     func toBitArray() -> [String] {
         var toReturn = [String]()
         for num in self {

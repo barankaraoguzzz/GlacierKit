@@ -21,7 +21,8 @@ let package = Package(
             name: "GlacierKit"),
         .testTarget(
             name: "GlacierKitTests",
-            dependencies: ["GlacierKit"]
+            dependencies: ["GlacierKit"],
+            resources: [.process("Resources")]
         ),
     ]
 )

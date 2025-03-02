@@ -8,7 +8,7 @@
 import Testing
 import GlacierKit
 
-struct Test {
+struct MnemonicProviderTests {
     
     private var mnemonicProvider: (MnemonicProvidable & MnemonicValidateable)!
     

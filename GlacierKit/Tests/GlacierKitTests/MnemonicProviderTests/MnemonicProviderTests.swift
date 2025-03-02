@@ -18,21 +18,18 @@ struct Test {
 
     @Test func test_create_mnemonic_words() async throws {
         #expect(throws: Never.self, performing: {
-            let _ = try mnemonicProvider.getWords(wordsCount: .twelve)
-            let _ = try mnemonicProvider.getWords(wordsCount: .eighteen)
-            let _ = try mnemonicProvider.getWords(wordsCount: .twentyFour)
+            MnemonicWordCount.allCases.forEach {
+                _ = try! mnemonicProvider.getWords(wordsCount: $0)
+            }
         })
     }
     
     @Test func test_generate_mnemonic_words_count() async throws {
         #expect(throws: Never.self, performing: {
-            let twelveCount = try mnemonicProvider.getWords(wordsCount: .twelve).count
-            let eighteenCount = try mnemonicProvider.getWords(wordsCount: .eighteen).count
-            let twentyFourCount = try mnemonicProvider.getWords(wordsCount: .twentyFour).count
-            
-            #expect(twelveCount == 12)
-            #expect(eighteenCount == 18)
-            #expect(twentyFourCount == 24)
+            MnemonicWordCount.allCases.forEach {
+                let count = try! mnemonicProvider.getWords(wordsCount: $0)
+                #expect(count.count == $0.rawValue)
+            }
         })        
     }
     

@@ -18,7 +18,7 @@ public protocol MnemonicWordCountable {
     var checksumLength: Int { get }
 }
 
-public enum MnemonicWordCount: Int {
+public enum MnemonicWordCount: Int, CaseIterable {
     case twelve = 12
     case eighteen = 18
     case twentyFour = 24

@@ -2,7 +2,7 @@
 
 **Bitcoin Cold Wallet Components in Swift | BIP39, BIP32, BIP44, BIP84 Support**
 
-[![Swift](https://img.shields.io/badge/Swift-5.7-orange.svg)](https://swift.org)  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![Medium](https://img.shields.io/badge/Medium-Articles-black.svg)](https://medium.com/@barankaraoguz)
+[![Swift](https://img.shields.io/badge/Swift-5.7-orange.svg)](https://swift.org)  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![Medium](https://img.shields.io/badge/Medium-Articles-brown.svg)](https://medium.com/@barankaraoguz)
 
 GlacierKit is an open-source Swift library designed for building **Bitcoin cold wallet components**. It provides essential functionality such as mnemonic seed generation, master seed derivation, and extended key management based on BIP standards.
 
